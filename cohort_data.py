@@ -20,7 +20,9 @@ def all_houses(filename):
 
   for line in filename: #get each line in filename
     line = line.rstrip().split("|") #remove the "|"
-    list_of_houses.append(line[2])#should get the 3rd element
+
+    if line[2]:
+      list_of_houses.append(line[2])#should get the 3rd element
 
   houses = set(list_of_houses) #set()
   return houses #for some reason not looping through all the lines in filename
